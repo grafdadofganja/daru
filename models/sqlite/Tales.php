@@ -13,14 +13,14 @@ use Yii;
  * @property string $text
  * @property string $description
  */
-class Tails extends \yii\db\ActiveRecord
+class Tales extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'tails';
+        return 'tales';
     }
 
     /**

@@ -6,7 +6,7 @@ use app\models\sqlite\Persons;
 use app\models\sqlite\Locations;
 use app\models\sqlite\Religions;
 use app\models\sqlite\Fractions;
-use app\models\sqlite\Tails;
+use app\models\sqlite\Tales;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -118,7 +118,7 @@ class ModerController extends Controller
 
     public function actionTale()
     {
-        $model = new Tails();
+        $model = new Tales();
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
@@ -128,7 +128,7 @@ class ModerController extends Controller
             }
         }
 
-        return $this->render('tail', [
+        return $this->render('tale', [
             'model' => $model,
         ]);
     }

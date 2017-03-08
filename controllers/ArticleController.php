@@ -6,6 +6,7 @@ use app\models\sqlite\Persons;
 use app\models\sqlite\Locations;
 use app\models\sqlite\Religions;
 use app\models\sqlite\Fractions;
+use app\models\sqlite\Tales;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -22,26 +23,31 @@ class ArticleController extends Controller
     public function actionIndex($category)
     {
         $model = '';
+        $url = 'article';
         switch ($category) {
             case 'person':
                 $model = Persons::find()
                     ->orderBy('id')
                     ->all();
+                $url.='/person';
                 break;
             case 'fraction':
                 $model = Fractions::find()
                     ->orderBy('id')
                     ->all();
+                $url.='/fraction';
                 break;
             case 'religion':
                 $model = Religions::find()
                     ->orderBy('id')
                     ->all();
+                $url.='/religion';
                 break;
             case 'location':
                 $model = Locations::find()
                     ->orderBy('id')
                     ->all();
+                $url.='/location';
                 break;
 
             default:
@@ -50,6 +56,7 @@ class ArticleController extends Controller
         }
         return $this->render('category', [
             'model' => $model,
+            'url' => $url,
         ]);
     }
 
@@ -60,7 +67,7 @@ class ArticleController extends Controller
      */
     public function actionReligion($id = 0)
     {
-        $model = new Religions();
+        $model = Religions::findOne($id);
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
@@ -83,7 +90,7 @@ class ArticleController extends Controller
      */
     public function actionFraction($id = 0)
     {
-        $model = new Fractions();
+        $model = Fractions::findOne($id);
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
@@ -106,7 +113,7 @@ class ArticleController extends Controller
      */
     public function actionLocation($id = 0)
     {
-        $model = new Locations();
+        $model = Locations::findOne($id);
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
@@ -129,8 +136,7 @@ class ArticleController extends Controller
      */
     public function actionPerson($id = 0)
     {
-        // $model = new Persons();
-        $model = Persons::findOne(1);
+        $model = Persons::findOne($id);
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
@@ -147,18 +153,9 @@ class ArticleController extends Controller
 
     public function actionTale($id = 0)
     {
-        // $model = new Persons();
-        $model = 1;
-        /*
-        if ($model->load(Yii::$app->request->post())) {
-            if ($model->validate()) {
-                // form inputs are valid, do something here
-                $model->save(false);
-                return;
-            }
-        }
-        */
-        return $this->render('tail', [
+        $model = Tales::findOne($id);
+        
+        return $this->render('tale', [
             'model' => $model,
         ]);
     }

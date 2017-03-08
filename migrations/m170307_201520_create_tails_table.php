@@ -12,7 +12,7 @@ class m170307_201520_create_tails_table extends Migration
      */
     public function up()
     {
-        $this->createTable('tails', [
+        $this->createTable('tales', [
             'id' => $this->primaryKey(),
             'chapter' => $this->string(),
             'name' => $this->string(),
@@ -27,6 +27,6 @@ class m170307_201520_create_tails_table extends Migration
      */
     public function down()
     {
-        $this->dropTable('tails');
+        $this->dropTable('tales');
     }
 }

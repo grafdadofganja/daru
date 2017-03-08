@@ -17,7 +17,7 @@ use yii\helpers\Html;
 						.Html::img($img, ['alt' => $category->name, 'class' => '']).
 						'<figcaption>'.$category->name.'</figcaption>
 					</figure>',	
-				['user/view', 'id' => $category->id], ['class' => 'profile-link']) ?>		
+				[$url, 'id' => $category->id], ['class' => 'profile-link']) ?>		
 			<?php endforeach; ?>	 	
 		 </div>	
 	</div>
