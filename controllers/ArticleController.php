@@ -21,7 +21,36 @@ class ArticleController extends Controller
      */
     public function actionIndex($category)
     {
-        return $this->render('category');
+        $model = '';
+        switch ($category) {
+            case 'person':
+                $model = Persons::find()
+                    ->orderBy('id')
+                    ->all();
+                break;
+            case 'fraction':
+                $model = Fractions::find()
+                    ->orderBy('id')
+                    ->all();
+                break;
+            case 'religion':
+                $model = Religions::find()
+                    ->orderBy('id')
+                    ->all();
+                break;
+            case 'location':
+                $model = Locations::find()
+                    ->orderBy('id')
+                    ->all();
+                break;
+
+            default:
+                $this->redirect(['site/index']);
+                break;
+        }
+        return $this->render('category', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -116,7 +145,7 @@ class ArticleController extends Controller
         ]);
     }
 
-    public function actionTail($id = 0)
+    public function actionTale($id = 0)
     {
         // $model = new Persons();
         $model = 1;

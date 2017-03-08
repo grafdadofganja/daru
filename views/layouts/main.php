@@ -56,15 +56,15 @@ AppAsset::register($this);
                     ],
                     [
                         'label' => 'Эпопея', 'items' => [
-                            ['label' => 'Сезон 1', 'url' => ['/article/tail']],
-                            ['label' => 'Сезон 2', 'url' => ['/article/tail']],
-                            ['label' => 'Сезон 3', 'url' => ['/article/tail']],
+                            ['label' => 'Сезон 1', 'url' => ['/article/tale']],
+                            ['label' => 'Сезон 2', 'url' => ['/article/tale']],
+                            ['label' => 'Сезон 3', 'url' => ['/article/tale']],
                         ]
                     ],
                     ['label' => 'Прочее', 'url' => ['/site/update-price']],
                     [
                         'label' => 'Модератор', 'items' => [
-                            ['label' => 'Эпопея', 'url' => ['/moder/tail']],
+                            ['label' => 'Эпопея', 'url' => ['/moder/tale']],
                             ['label' => 'Персонажи', 'url' => ['/moder/person']],
                             ['label' => 'Регионы', 'url' => ['/moder/region']],
                             ['label' => 'Народы', 'url' => ['/moder/nation']],

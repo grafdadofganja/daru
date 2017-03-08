@@ -10,12 +10,15 @@ use yii\helpers\Html;
 <main class="row">
 	<div class="personcategories">
 		<div class="perslink">
-		 	<?= Html::a( 
-			 	'<figure>'
-					.Html::img('@web'.$model->img, ['alt' => $model->name, 'class' => '']).
-					'<figcaption>'.$model->name.'</figcaption>
-				</figure>',	
-			['user/view', 'id' => $model->id], ['class' => 'profile-link']) ?>			 	
+			<?php foreach ($model as $category): ?>
+				<?php $img = '@web/'.$category->img; ?>
+			 	<?= Html::a( 
+				 	'<figure>'
+						.Html::img($img, ['alt' => $category->name, 'class' => '']).
+						'<figcaption>'.$category->name.'</figcaption>
+					</figure>',	
+				['user/view', 'id' => $category->id], ['class' => 'profile-link']) ?>		
+			<?php endforeach; ?>	 	
 		 </div>	
 	</div>
 </main>
