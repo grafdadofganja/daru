@@ -31,11 +31,17 @@ body {
 }
 
 .footer {
-  height: 60px;
+  margin-top: 50px;
+  margin-bottom: 0;
   background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
+  border-top: 1px solid #ddd;  
+  padding: 10px; 
+  vertical-align: middle; 
 }
+.footer .pull-left, .footer .pull-right {
+  margin-bottom: 0;
+}
+
 
 .right-float {
   float: right;
@@ -43,4 +49,9 @@ body {
 
 .filling {
   min-height: 100vh;
+  box-shadow:0px 0px 20px 2px rgba(255, 0, 0,0.5) ;
+}
+
+.logo-img {
+  width: 100%;
 }

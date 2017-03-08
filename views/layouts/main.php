@@ -34,7 +34,7 @@ AppAsset::register($this);
         <?php
 
             NavBar::begin([
-                'brandLabel' => 'Рави Дару',
+                'brandLabel' => Html::img('@web/img/rdawi.jpg', ['alt' => 'Рави Дару', 'class' => 'logo-img']),//'Рави Дару',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse',
@@ -106,9 +106,9 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; zlapot, cherapot edition <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right">Revi Daru company &copy;</p>
     </div>
 </footer>
 
