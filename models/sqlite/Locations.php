@@ -45,7 +45,7 @@ class Locations extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['info', 'geo', 'chrono', 'leadership', 'population', 'transport', 'life', 'arch', 'facts', 'name', 'location', 'leader', 'popdivision', 'type', 'popamount', 'primaryobj', 'aim', 'status', 'img', 'tag'], 'required'],
+            [['info', 'geo', 'chrono', 'leadership', 'population', 'transport', 'life', 'arch', 'name', 'location', 'leader', 'popdivision', 'type', 'popamount', 'primaryobj', 'aim', 'status', 'img', 'tag'], 'required'],
             [['info', 'geo', 'chrono', 'leadership', 'population', 'transport', 'life', 'arch', 'facts'], 'string'],
             [['name', 'location', 'leader', 'popdivision', 'type', 'popamount', 'primaryobj', 'aim', 'status', 'img', 'tag'], 'string', 'max' => 255],
         ];

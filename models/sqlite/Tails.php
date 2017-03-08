@@ -42,7 +42,7 @@ class Tails extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'chapter' => 'Глава',
+            'chapter' => 'Сезон',
             'name' => 'Название',
             'text' => 'Текст',
             'description' => 'Описание',

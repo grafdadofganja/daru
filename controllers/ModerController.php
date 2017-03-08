@@ -116,7 +116,7 @@ class ModerController extends Controller
         ]);
     }
 
-    public function actionTail()
+    public function actionTale()
     {
         $model = new Tails();
 
@@ -124,7 +124,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 $model->save(false);
                 // form inputs are valid, do something here
-                return $this->redirect(['tail']);
+                return $this->redirect(['tale']);
             }
         }
 
