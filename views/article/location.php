@@ -12,6 +12,7 @@ use yii\helpers\Html;
 
     <div class="col-md-8">
         <h2><?= Html::encode($model->name) ?></h2> 
+        <?= Html::a('Править', ['moder/change-location', 'id' => $model->id], ['class' => 'change-post']) ?> 
 
         <p class="intro">
             <span><?= Html::encode($model->name) ?> - </span>

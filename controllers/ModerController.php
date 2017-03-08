@@ -134,6 +134,115 @@ class ModerController extends Controller
     }
 
 
+    /// CHANGE 
+
+    /**
+     * Add price action.
+     *
+     * @return string
+     */
+    public function actionChangeReligion($id)
+    {
+        $model = Religions::findOne($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                $model->save(false);
+                return $this->redirect(['religion']);
+            }
+        }
+
+        return $this->render('religion', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Update price action.
+     *
+     * @param $id
+     * @return string
+     */
+    public function actionChangeFraction($id)
+    {
+        $model = Fractions::findOne($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                $model->save(false);
+                return $this->redirect(['fraction']);
+            }
+        }
+
+        return $this->render('fraction', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Update price action.
+     *
+     * @param $id
+     * @return string
+     */
+    public function actionChangeLocation($id)
+    {
+        $model = Locations::findOne($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                $model->save(false);
+                return $this->redirect(['location']);
+            }
+        }
+
+        return $this->render('location', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Update price action.
+     *
+     * @param $id
+     * @return string
+     */
+    public function actionChangePerson($id)
+    {
+        $model = Persons::findOne($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                $model->save(false);
+                return $this->redirect(['person']);
+            }
+        }
+
+        return $this->render('person', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionChangeTale($id)
+    {
+        $model = Tales::findOne($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                $model->save(false);
+                // form inputs are valid, do something here
+                return $this->redirect(['tale']);
+            }
+        }
+
+        return $this->render('tale', [
+            'model' => $model,
+        ]);
+    }
 
 }
 
