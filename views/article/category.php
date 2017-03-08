@@ -5,11 +5,14 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\sqlite\Fractions */
 /* @var $url string */
+/* @var $title string */
+
+$this->title = $title;
 ?>
 
 <main class="row">
 	<div class="col-md-12">
-		<h2 class="title">Персонажи вселенной Дару</h2>
+		<h2 class="title"><?= $title ?></h2>
 		<div class="personcategories">			
 			<?php foreach ($model as $category): ?>
 				<div class="perslink col-md-6 col-lg-4">

@@ -5,6 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\sqlite\Fractions */
 /* @var $form ActiveForm */
+
+$this->title = $model->name;
 ?>
 
 <div class="articles row"> 

@@ -5,6 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\sqlite\Fractions */
 /* @var $form ActiveForm */
+
+$this->title = $model->name;
 ?>
 
 <div class="articles row"> 
@@ -22,7 +24,11 @@ use yii\helpers\Html;
         <p class="intro">
             <?= Html::encode($model->bio) ?>
         </p>
-        <h3>Отношения с Абдулем</h3>
+        <?php if($model->tag != 'abdul') { ?>
+            <h3>Отношения с Абдулем</h3>
+        <?php } else { ?>
+             <h3>Отношения с миром</h3>
+        <?php } ?>
         <p class="intro">
             <?= Html::encode($model->relation) ?>
         </p>

@@ -6,6 +6,8 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\sqlite\Fractions */
 /* @var $form ActiveForm */
+
+$this->title = "Панель модератора";
 ?>
 <div class="fraction">
 

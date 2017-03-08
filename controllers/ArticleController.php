@@ -24,30 +24,35 @@ class ArticleController extends Controller
     {
         $model = '';
         $url = 'article';
+        $title = ' вселенной Дару';
         switch ($category) {
             case 'person':
                 $model = Persons::find()
                     ->orderBy('id')
                     ->all();
                 $url.='/person';
+                $title = 'Персонажи'.$title;
                 break;
             case 'fraction':
                 $model = Fractions::find()
                     ->orderBy('id')
                     ->all();
                 $url.='/fraction';
+                $title = 'Фракции'.$title;
                 break;
             case 'religion':
                 $model = Religions::find()
                     ->orderBy('id')
                     ->all();
                 $url.='/religion';
+                $title = 'Религии'.$title;
                 break;
             case 'location':
                 $model = Locations::find()
                     ->orderBy('id')
                     ->all();
                 $url.='/location';
+                $title = 'Локации'.$title;
                 break;
 
             default:
@@ -57,6 +62,7 @@ class ArticleController extends Controller
         return $this->render('category', [
             'model' => $model,
             'url' => $url,
+            'title' => $title,
         ]);
     }
 
