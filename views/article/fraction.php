@@ -14,7 +14,7 @@ use yii\helpers\Html;
         <h2><?= Html::encode($model->name) ?></h2> 
 
         <p class="intro">
-            <span><?= Html::encode($model->fullname) ?></span>
+            <span><?= Html::encode($model->fullname) ?> - </span>
             <?= Html::encode($model->info) ?>            
         </p>
         <h3>Возниковение</h3>
@@ -23,7 +23,7 @@ use yii\helpers\Html;
         </p> 
         <h3>Хронологическая лента</h3>
         <p class="intro">
-            <?= Html::encode($model->history) ?>
+            <?=$model->history ?>
         </p>
         <h3>Географическое положение</h3>
         <p class="intro">
@@ -42,7 +42,7 @@ use yii\helpers\Html;
 
     <div class="col-md-4">
         <ul class="baseinfo">
-            <?= Html::img('@web/img/'.$model->img, ['alt' => $model->name, 'class' => 'mainimage']) ?>   
+            <?= Html::img('@web/'.$model->img, ['alt' => $model->name, 'class' => 'mainimage']) ?>   
             <li><span>Официальное название: </span><?= Html::encode($model->fullname) ?></li>  
             <li><span>Численность: </span><?= Html::encode($model->population) ?></li>       
             <li><span>Штаб-квартира: </span><?= Html::encode($model->location) ?></li>

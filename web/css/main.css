@@ -11,8 +11,12 @@ body{
 	color: black;
 }
 
-
-
+.intro span{
+	font-weight: bold;
+}
+.articles .intro{
+	font-size: 1.2em;
+}
 .titleimg{
 	width: 100%;
 	margin: 0 auto;
@@ -169,6 +173,11 @@ header{
 	top: 20px;
 	left: 40px;
 	z-index: 2;
+}
+.intro{
+	color: black;
+	font-style: italic;
+	font-size: 1em;
 }
 
 

@@ -14,7 +14,7 @@ use yii\helpers\Html;
         <h2><?= Html::encode($model->name) ?></h2> 
 
         <p class="intro">
-            <span><?= Html::encode($model->fullname) ?></span>
+            <span><?= Html::encode($model->fullname) ?> - </span>
             <?= Html::encode($model->info) ?>
         </p>
         <h3>Биография</h3>
@@ -36,7 +36,7 @@ use yii\helpers\Html;
 
     <div class="col-md-4">
         <ul class="baseinfo">
-            <?= Html::img('@web/img/'.$model->img, ['alt' => $model->name, 'class' => 'mainimage']) ?>   
+            <?= Html::img('@web/'.$model->img, ['alt' => $model->name, 'class' => 'mainimage']) ?>   
             <li><span>Полное имя: </span><?= Html::encode($model->fullname) ?></li>
             <li><span>Также известен как: </span><?= Html::encode($model->nicks) ?></li>
             <li><span>Место жительства: </span><?= Html::encode($model->location) ?></li>

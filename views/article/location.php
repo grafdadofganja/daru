@@ -14,7 +14,7 @@ use yii\helpers\Html;
         <h2><?= Html::encode($model->name) ?></h2> 
 
         <p class="intro">
-            <span><?= Html::encode($model->fullname) ?></span>
+            <span><?= Html::encode($model->name) ?> - </span>
             <?= Html::encode($model->info) ?>
         </p>
         <h3>Физико-географическая характеристика</h3>   
@@ -23,7 +23,7 @@ use yii\helpers\Html;
         </p>
         <h3>Хронология</h3>
         <p class="intro">
-            <?= Html::encode($model->chrono) ?>
+            <?= $model->chrono ?>
         </p>
         <h3>Руководство</h3>
         <p class="intro">
@@ -50,7 +50,7 @@ use yii\helpers\Html;
 
     <div class="col-md-4">
         <ul class="baseinfo">
-            <?= Html::img('@web/img/'.$model->img, ['alt' => $model->name, 'class' => 'mainimage']) ?>   
+            <?= Html::img('@web/'.$model->img, ['alt' => $model->name, 'class' => 'mainimage']) ?>   
             <li><span>Географическое положение: </span><?= Html::encode($model->location) ?></li>
             <li><span>Управляющий: </span><?= Html::encode($model->leader) ?></li>
             <li><span>Население: </span><?= Html::encode($model->popdivision) ?></li>
