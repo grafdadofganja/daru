@@ -30,7 +30,8 @@ use yii\helpers\Html;
         <p class="intro">
             <?= Html::encode($model->geo) ?>
         </p>
-        </h3>
+        <h3>Особенности и внутреннее устройство</h3>
+
         <p class="intro">
             <?= Html::encode($model->system) ?>
         </p>

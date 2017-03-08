@@ -10,6 +10,20 @@
 body{
 	color: black;
 }
+.articles h2{
+	display: inline-block;
+}
+.change-post{
+	margin-left: 20px;
+}
+.change-post::after{
+	content: ' ]';
+	color: black;
+}
+.change-post::before{
+	content: '[ ';
+	color: black;
+}
 
 .intro span{
 	font-weight: bold;
