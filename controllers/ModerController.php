@@ -38,7 +38,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return;
+                return $this->redirect(['religion']);
             }
         }
 
@@ -61,7 +61,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return;
+                return $this->redirect(['fraction']);
             }
         }
 
@@ -84,7 +84,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return;
+                return $this->redirect(['location']);
             }
         }
 
@@ -107,7 +107,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return;
+                return $this->redirect(['person']);
             }
         }
 
@@ -124,7 +124,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 $model->save(false);
                 // form inputs are valid, do something here
-                return;
+                return $this->redirect(['tail']);
             }
         }
 
