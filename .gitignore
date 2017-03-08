@@ -31,10 +31,10 @@ tests/_support/_generated
 
 /assets
 /commands
-/config
+
 /mail
 /runtime
-/web
+
 
 *.md
 yii

@@ -1,0 +1,46 @@
+body {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+.wrap {
+    min-height: 100vh;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+.container{
+  background-color: rgba(255,255,255,0.3);
+}
+.navbar-right {
+  margin-right: 10px;
+}
+
+.collapse, .navbar-collapse {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar > .container {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.navbar-invers {
+  background-color: #000;
+}
+
+.footer {
+  height: 60px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.right-float {
+  float: right;
+}
+
+.filling {
+  min-height: 100vh;
+}

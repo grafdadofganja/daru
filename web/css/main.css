@@ -1,0 +1,234 @@
+@font-face {
+	font-family: Madera;
+	src: url(../font/madera.ttf);
+}
+@font-face {
+	font-family: Lobster;
+	src: url(../font/lobster.ttf);
+}
+
+body{
+	color: black;
+}
+
+
+
+.titleimg{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+.map-img{
+	width: 100%;	
+	cursor: -webkit-zoom-in;
+	cursor: -moz-zoom-in;
+}
+.resize{
+	background-color: rgba(255,255,255,.8);
+	position: fixed;
+	top: 0;
+	margin: 0 auto;	
+	z-index: 10;
+	width: 100%;
+	height: 100vh;
+}
+.resize img {
+	height: 95vh;
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+	cursor: -webkit-zoom-out; cursor: -moz-zoom-out;
+}
+.subcat{
+	color: #370300;
+	border-bottom: 1px solid orange;
+}
+.imgg{
+	width: 25%;
+	display: inline-block;
+}
+.imgg img{
+	width: 100%;
+	height: 40px;
+}
+.epo{
+	font-family: "Lobster";
+	font-size: 1.5em;
+	line-height: 1em;
+	text-align: center;
+	color: black;
+}
+.epo p{
+	white-space: pre-line;	
+}
+
+.chapter{
+	width: 50%;
+}
+.nav-right, .chapter{
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	vertical-align: top;
+}
+.tails{
+	background: url(../img/bgseason.jpg);
+	background-repeat: no-repeat;
+	background-attachment:  fixed;
+}
+.clearfix{
+	clear: both;
+}
+footer{
+	padding: 0 20px;
+	width: 100%;
+	background-color: #eee;
+	box-sizing: border-box;
+}
+.nextchapter{
+	text-decoration: none;
+	font-family: "Madera";
+	font-size: 1.5em;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid black;
+	background-color: white;
+	padding: 0px 15px 5px 15px;
+	margin-left:120px;
+}
+.perslink{
+	width: 30%;
+	float: left;
+	text-align: center;
+
+}
+.perslink img{
+	width: 100%;
+	max-width: 200px;
+	max-height: 200px;
+	min-height: 200px;
+	min-width: 200px;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+
+.baseinfo{
+	padding: 0;
+	border: 1px solid #444;
+}
+.baseinfo img{
+	width: 100%;	
+}
+.baseinfo span{
+	font-weight: bold;	
+}
+.baseinfo li{
+	list-style-type: none;
+	border-bottom: 1px solid #777;
+	padding: 10px;
+}
+main{
+	padding: 20px;
+}
+header{
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+.personcategories {
+	width: 95%;
+	margin: 0 auto;
+	display: -webkit-flex; 
+	-webkit-flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+.perslink {	
+	position: relative; 
+	z-index: 1;
+}
+.perslink a {
+	text-decoration: none;
+	color: #222;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.perslink img:hover{
+	filter: grayscale(100%);
+    transition: 2s;        
+	box-shadow: 0 0 30px rgba(255,0,0,0.5);
+}
+.perslink :hover {	
+	z-index: 2;
+}
+.daru-panel {
+	position: absolute;
+	top: 20px;
+	left: 40px;
+	z-index: 2;
+}
+
+
+
+
+
+
+
+//чужие стили
+
+
+// Accord
+.accordion
+{
+	width:100%;
+	min-height:300px;
+	margin:20px auto;
+}
+.accordion-item {
+	font-size: 1.3em;
+	margin: 0 10px 0 10px;
+	padding: 10px;
+	height: auto;
+	background: #f2f2f2;
+	border-bottom:1px solid #ccc;
+	color: #000;
+	cursor:pointer;
+}
+
+.accordion-item.open
+{
+	background:#14ad40;
+	border-bottom:0px;
+	color:#fff;
+}
+.accordion-item.open .type {
+	float: right;
+	padding: 10px;
+}
+
+.accordion-item .type {
+	float: right;
+	padding: 10px;
+}
+
+div.data {
+	background: #fff;
+	margin: 0 10px 0 10px;
+	padding: 10px;
+	border:1px solid #ccc;
+	font-size: 1.2em;
+	line-height: 140%;
+	display:none;
+}
+.accordion li a:link{
+	color:#000;
+}
+.accordion li a:visited{
+	color:#333;
+}
+
+
+
