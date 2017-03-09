@@ -142,7 +142,8 @@ class ModerController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
                 // form inputs are valid, do something here
-                return;
+                $model->save(false);
+                return $this->redirect(['nation']);
             }
         }
 
@@ -158,7 +159,8 @@ class ModerController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
                 // form inputs are valid, do something here
-                return;
+                $model->save(false);
+                return $this->redirect(['region']);
             }
         }
 

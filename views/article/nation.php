@@ -17,7 +17,7 @@ $this->title = $model->name;
         <?= Html::a('Править', ['moder/change-nation', 'id' => $model->id], ['class' => 'change-post']) ?> 
 
         <p class="intro">
-            <span><?= Html::encode($model->fullname) ?> - </span>
+            <span><?= Html::encode($model->name) ?> - </span>
             <?= Html::encode($model->info) ?>
         </p>
         <h3>История</h3>

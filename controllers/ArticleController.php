@@ -67,7 +67,7 @@ class ArticleController extends Controller
                 $model = Regions::find()
                     ->orderBy('id')
                     ->all();
-                $url.='region';
+                $url.='/region';
                 $title = 'Регионы'.$title;
                 break;
 
