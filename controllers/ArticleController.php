@@ -8,6 +8,7 @@ use app\models\sqlite\Religions;
 use app\models\sqlite\Fractions;
 use app\models\sqlite\Tales;
 use app\models\sqlite\Nations;
+use app\models\sqlite\Regions;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -59,8 +60,15 @@ class ArticleController extends Controller
                 $model = Nations::find()
                     ->orderBy('id')
                     ->all();
-                $url.='/location';
+                $url.='/nation';
                 $title = 'Национальности'.$title;
+                break;
+            case 'region':
+                $model = Regions::find()
+                    ->orderBy('id')
+                    ->all();
+                $url.='region';
+                $title = 'Регионы'.$title;
                 break;
 
             default:
@@ -79,7 +87,7 @@ class ArticleController extends Controller
      *
      * @return string
      */
-    public function actionReligion($id = 0)
+    public function actionReligion($id = 1)
     {
         $model = Religions::findOne($id);
 
@@ -102,7 +110,7 @@ class ArticleController extends Controller
      * @param $id
      * @return string
      */
-    public function actionFraction($id = 0)
+    public function actionFraction($id = 1)
     {
         $model = Fractions::findOne($id);
 
@@ -125,7 +133,7 @@ class ArticleController extends Controller
      * @param $id
      * @return string
      */
-    public function actionLocation($id = 0)
+    public function actionLocation($id = 1)
     {
         $model = Locations::findOne($id);
 
@@ -148,7 +156,7 @@ class ArticleController extends Controller
      * @param $id
      * @return string
      */
-    public function actionPerson($id = 0)
+    public function actionPerson($id = 1)
     {
         $model = Persons::findOne($id);
 
@@ -172,7 +180,7 @@ class ArticleController extends Controller
      */
     public function actionNation($id = 1)
     {
-        $model = Nation::findOne($id);
+        $model = Nations::findOne($id);
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
@@ -183,6 +191,28 @@ class ArticleController extends Controller
         }
 
         return $this->render('nation', [
+            'model' => $model,
+        ]);
+    }
+    /**
+     * Update price action.
+     *
+     * @param $id
+     * @return string
+     */
+    public function actionRegion($id = 1)
+    {
+        $model = Regions::findOne($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                $model->save(false);
+                return;
+            }
+        }
+
+        return $this->render('region', [
             'model' => $model,
         ]);
     }

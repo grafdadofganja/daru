@@ -8,6 +8,7 @@ use app\models\sqlite\Religions;
 use app\models\sqlite\Fractions;
 use app\models\sqlite\Tales;
 use app\models\sqlite\Nations;
+use app\models\sqlite\Regions;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -150,6 +151,21 @@ class ModerController extends Controller
         ]);
     }
 
+    public function actionRegion()
+    {
+        $model = new Regions();
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                return;
+            }
+        }
+
+        return $this->render('region', [
+            'model' => $model,
+        ]);
+    }
     /// CHANGE 
 
     /**
@@ -269,7 +285,7 @@ class ModerController extends Controller
      */
     public function actionChangeNation($id)
     {
-        $model = Persons::findOne($id);
+        $model = Nations::findOne($id);
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate()) {
@@ -280,6 +296,23 @@ class ModerController extends Controller
         }
 
         return $this->render('nation', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionChangeRegion($id)
+    {
+        $model = Regions::findOne($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                $model->save(false);
+                return $this->redirect(['region']);
+            }
+        }
+
+        return $this->render('region', [
             'model' => $model,
         ]);
     }

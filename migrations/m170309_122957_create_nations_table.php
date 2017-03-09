@@ -14,15 +14,15 @@ class m170309_122957_create_nations_table extends Migration
     {
         $this->createTable('nations', [
             'id' => $this->primaryKey(),
-            'name' => $this->string(),
-            'img' => $this->string(),
-            'tag' => $this->string(),
+            'name' => $this->string(),            
             'population' => $this->string(),
             'place' => $this->string(),
             'lang' => $this->string(),
             'religion' => $this->string(),
             'country' => $this->string(),
             'relation' => $this->string(),
+            'img' => $this->string(),
+            'tag' => $this->string(),
             'origin' => $this->string(),
             'info' => $this->text(),
             'history' => $this->text(),
