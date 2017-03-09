@@ -10,7 +10,7 @@ use yii\helpers\Html;
 $this->title = $model->name;
 ?>
 
-<main class="row">
+<main class="row tales">
 	<div class="col-md-5">
 		<?= $this->render('accord/_tales.php', [
 			'menu' => $menu,
@@ -22,8 +22,15 @@ $this->title = $model->name;
 		<div class="epo">
 
 			<h2><?= Html::encode($model->name) ?></h2>
+			<?= Html::a('Править', ['moder/change-tale', 'id' => $model->id], ['class' => 'change-post']) ?> 
+
 			<p>
 				<?= $model->text ?>
+			</p>
+			<?= Html::a('Следующая глава', ['article/tale', 'id' => ++$model->id], ['class' => 'next']) ?>
+
+			<p class="description">
+				<?= $model->description ?>
 			</p>
 
 		</div>
