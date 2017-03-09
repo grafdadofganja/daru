@@ -90,10 +90,11 @@ body{
 	-moz-box-sizing: border-box;
 	vertical-align: top;
 }
-.tails{
-	background: url(/daru/web/img/bgseason.jpg);
+.tales{
+	background: url(../img/bgseason.jpg);
 	background-repeat: no-repeat;
 	background-attachment:  fixed;
+	margin-top: -20px;
 }
 .clearfix{
 	clear: both;
