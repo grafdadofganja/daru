@@ -160,10 +160,16 @@ class ArticleController extends Controller
     public function actionTale($id = 2)
     {
         $model = Tales::findOne($id);
+
+        $menu = Tales::find()
+            ->select(['id', 'name', 'chapter'])
+            ->where(['>', 'id', '1'])
+            ->all();
         
         return $this->render('tale', [
             'model' => $model,
-        ]);
+            'menu' => $menu,
+        ]);       
     }
 
 
