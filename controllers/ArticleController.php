@@ -7,6 +7,7 @@ use app\models\sqlite\Locations;
 use app\models\sqlite\Religions;
 use app\models\sqlite\Fractions;
 use app\models\sqlite\Tales;
+use app\models\sqlite\Nations;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -53,6 +54,13 @@ class ArticleController extends Controller
                     ->all();
                 $url.='/location';
                 $title = 'Локации'.$title;
+                break;
+            case 'nation':
+                $model = Nations::find()
+                    ->orderBy('id')
+                    ->all();
+                $url.='/location';
+                $title = 'Национальности'.$title;
                 break;
 
             default:
@@ -153,6 +161,28 @@ class ArticleController extends Controller
         }
 
         return $this->render('person', [
+            'model' => $model,
+        ]);
+    }
+    /**
+     * Update price action.
+     *
+     * @param $id
+     * @return string
+     */
+    public function actionNation($id = 1)
+    {
+        $model = Nation::findOne($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                $model->save(false);
+                return;
+            }
+        }
+
+        return $this->render('nation', [
             'model' => $model,
         ]);
     }

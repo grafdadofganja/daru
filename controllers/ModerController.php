@@ -7,6 +7,7 @@ use app\models\sqlite\Locations;
 use app\models\sqlite\Religions;
 use app\models\sqlite\Fractions;
 use app\models\sqlite\Tales;
+use app\models\sqlite\Nations;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -133,6 +134,21 @@ class ModerController extends Controller
         ]);
     }
 
+    public function actionNation()
+    {
+        $model = new Nations();
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                return;
+            }
+        }
+
+        return $this->render('nation', [
+            'model' => $model,
+        ]);
+    }
 
     /// CHANGE 
 
@@ -244,5 +260,28 @@ class ModerController extends Controller
         ]);
     }
 
+
+    /**
+     * Update price action.
+     *
+     * @param $id
+     * @return string
+     */
+    public function actionChangeNation($id)
+    {
+        $model = Persons::findOne($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                // form inputs are valid, do something here
+                $model->save(false);
+                return $this->redirect(['nation']);
+            }
+        }
+
+        return $this->render('nation', [
+            'model' => $model,
+        ]);
+    }
 }
 
