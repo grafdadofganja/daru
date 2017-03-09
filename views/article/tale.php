@@ -20,7 +20,7 @@ $this->title = $model->name;
 
 	<h2><?= Html::encode($model->name) ?></h2>
 	<p>
-		<?= Html::encode($model->text) ?>
+		<?= $model->text ?>
 	</p>
 
 </div>

@@ -157,7 +157,7 @@ class ArticleController extends Controller
         ]);
     }
 
-    public function actionTale($id = 0)
+    public function actionTale($id = 2)
     {
         $model = Tales::findOne($id);
         
