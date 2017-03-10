@@ -3,6 +3,7 @@
 namespace app\models\sqlite;
 
 use Yii;
+use app\models\Regexp;
 
 /**
  * This is the model class for table "religions".
