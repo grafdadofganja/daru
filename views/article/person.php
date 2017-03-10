@@ -18,11 +18,11 @@ $this->title = $model->name;
 
         <p class="intro">
             <span><?= Html::encode($model->fullname) ?> - </span>
-            <?= Html::encode($model->info) ?>
+            <?= $model->info ?>
         </p>
         <h3>Биография</h3>
         <p class="intro">
-            <?= Html::encode($model->bio) ?>
+            <?= $model->bio ?>
         </p>
         <?php if($model->tag != 'abdul') { ?>
             <h3>Отношения с Абдулем</h3>
@@ -30,14 +30,14 @@ $this->title = $model->name;
              <h3>Отношения с миром</h3>
         <?php } ?>
         <p class="intro">
-            <?= Html::encode($model->relation) ?>
+            <?= $model->relation ?>
         </p>
         <h3>Личная жизнь, увлечения</h3>
         <p class="intro">
-            <?= Html::encode($model->life) ?>
+            <?= $model->life ?>
         </p>
         <h3>Интересные факты</h3>
-        <p class="intro"><?= Html::encode($model->facts) ?></p>
+        <p class="intro"><?= $model->facts ?></p>
 
     </div>  
 
