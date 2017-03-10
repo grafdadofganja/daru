@@ -76,4 +76,19 @@ class Religions extends \yii\db\ActiveRecord
             'facts' => 'Интересные факты',
         ];
     }
+
+    public function beforeSave($insert)
+	{
+	    if (parent::beforeSave($insert)) {			
+            $model = $this->attributes;
+
+            foreach ($model as $name => $value) {
+               $model[$name] = Regexp::generateLink($value);
+            }
+            $this->attributes = $model;
+	        return true;
+	    }
+	    return false;
+	}
+
 }

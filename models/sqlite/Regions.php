@@ -3,6 +3,7 @@
 namespace app\models\sqlite;
 
 use Yii;
+use app\models\Regexp;
 
 /**
  * This is the model class for table "regions".
@@ -80,4 +81,19 @@ class Regions extends \yii\db\ActiveRecord
             'importance' => 'Значение региона',
         ];
     }
+
+    public function beforeSave($insert)
+	{
+	    if (parent::beforeSave($insert)) {			
+            $model = $this->attributes;
+
+            foreach ($model as $name => $value) {
+               $model[$name] = Regexp::generateLink($value);
+            }
+            $this->attributes = $model;
+	        return true;
+	    }
+	    return false;
+	}
+
 }
