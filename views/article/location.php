@@ -17,8 +17,8 @@ $this->title = $model->name;
         <?= Html::a('Править', ['moder/change-location', 'id' => $model->id], ['class' => 'change-post']) ?> 
 
         <p class="intro">
-            <span><?= Html::encode($model->name) ?> - </span>
-            <?= Html::encode($model->info) ?>
+            <span><?= $model->name ?> - </span>
+            <?= $model->info ?>
         </p>
         <h3>Физико-географическая характеристика</h3>   
         <p class="intro">
@@ -38,7 +38,7 @@ $this->title = $model->name;
         </p>
         <h3>Транспорт</h3>
         <p class="intro">
-            <?= Html::encode($model->transport) ?>
+            <?= $model->transport ?>
         </p>
         <h3>Образование, занятия, устройство</h3>
         <p class="intro">
