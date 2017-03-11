@@ -44,14 +44,14 @@ $this->title = $model->name;
     <div class="col-md-4">
         <ul class="baseinfo">
             <?= Html::img('@web/'.$model->img, ['alt' => $model->name, 'class' => 'mainimage']) ?>   
-            <li><span>Полное имя: </span><?= Html::encode($model->fullname) ?></li>
-            <li><span>Также известен как: </span><?= Html::encode($model->nicks) ?></li>
-            <li><span>Место жительства: </span><?= Html::encode($model->location) ?></li>
-            <li><span>Пол: </span><?= Html::encode($model->gender) ?></li>
-            <li><span>Дата рождения: </span><?= Html::encode($model->birthday) ?></li>
-            <li><span>Вероисповедание: </span><?= Html::encode($model->religion) ?></a></li>
-            <li><span>Положение: </span><?= Html::encode($model->attitude) ?></li>
-            <li><span>Статус: </span><?= Html::encode($model->status) ?></li>
+            <li><span>Полное имя: </span><?= $model->fullname ?></li>
+            <li><span>Также известен как: </span><?= $model->nicks ?></li>
+            <li><span>Место жительства: </span><?= $model->location ?></li>
+            <li><span>Пол: </span><?= $model->gender ?></li>
+            <li><span>Дата рождения: </span><?= $model->birthday ?></li>
+            <li><span>Вероисповедание: </span><?= $model->religion ?></a></li>
+            <li><span>Положение: </span><?= $model->attitude ?></li>
+            <li><span>Статус: </span><?= $model->status ?></li>
         </ul>
     </div>
 
