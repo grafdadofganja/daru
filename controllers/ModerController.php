@@ -183,7 +183,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['religion']);
+                return $this->redirect(['religion', 'id'=>$id]);
             }
         }
 
@@ -206,7 +206,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['fraction']);
+                return $this->redirect(['fraction', 'id'=>$id]);
             }
         }
 
@@ -229,7 +229,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['location']);
+                return $this->redirect(['location', 'id'=>$id]);
             }
         }
 
@@ -252,7 +252,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['person']);
+                return $this->redirect(['person', 'id'=>$id]);
             }
         }
 
@@ -269,7 +269,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 $model->save(false);
                 // form inputs are valid, do something here
-                return $this->redirect(['article/tale','id'=>$id]);
+                return $this->redirect(['article/tale', 'id'=>$id]);
             }
         }
 
@@ -293,7 +293,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['nation']);
+                return $this->redirect(['nation', 'id'=>$id]);
             }
         }
 
@@ -310,7 +310,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['region']);
+                return $this->redirect(['region', 'id'=>$id]);
             }
         }
 

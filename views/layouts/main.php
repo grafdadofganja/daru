@@ -73,6 +73,7 @@ AppAsset::register($this);
                             ['label' => 'Локации', 'url' => ['/moder/location']],
                             ['label' => 'Система образования', 'url' => ['/moder/education']],
                             ['label' => 'Учения и религии', 'url' => ['/moder/religion']],
+                            ['label' => 'Обновить теги', 'url' => ['/search/tags']],
                         ]
                     ],
                     /*
