@@ -183,7 +183,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['religion', 'id'=>$id]);
+                return $this->redirect(['article/religion', 'id'=>$id]);
             }
         }
 
@@ -206,7 +206,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['fraction', 'id'=>$id]);
+                return $this->redirect(['article/fraction', 'id'=>$id]);
             }
         }
 
@@ -229,7 +229,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['location', 'id'=>$id]);
+                return $this->redirect(['article/location', 'id'=>$id]);
             }
         }
 
@@ -252,7 +252,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['person', 'id'=>$id]);
+                return $this->redirect(['article/person', 'id'=>$id]);
             }
         }
 
@@ -293,7 +293,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['nation', 'id'=>$id]);
+                return $this->redirect(['article/nation', 'id'=>$id]);
             }
         }
 
@@ -310,7 +310,7 @@ class ModerController extends Controller
             if ($model->validate()) {
                 // form inputs are valid, do something here
                 $model->save(false);
-                return $this->redirect(['region', 'id'=>$id]);
+                return $this->redirect(['article/region', 'id'=>$id]);
             }
         }
 
