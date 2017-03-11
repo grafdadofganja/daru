@@ -22,7 +22,7 @@ $this->title = $model->name;
         </p>
         <h3>Физико-географическая характеристика</h3>   
         <p class="intro">
-            <?= Html::encode($model->geo) ?>
+            <?=$model->geo ?>
         </p>
         <h3>Хронология</h3>
         <p class="intro">
@@ -30,11 +30,11 @@ $this->title = $model->name;
         </p>
         <h3>Руководство</h3>
         <p class="intro">
-            <?= Html::encode($model->leadership) ?>
+            <?= $model->leadership ?>
         </p>
         <h3>Население</h3>
         <p class="intro">
-            <?= Html::encode($model->population) ?>
+            <?= $model->population ?>
         </p>
         <h3>Транспорт</h3>
         <p class="intro">
@@ -42,11 +42,11 @@ $this->title = $model->name;
         </p>
         <h3>Образование, занятия, устройство</h3>
         <p class="intro">
-            <?= Html::encode($model->life) ?>
+            <?= $model->life ?>
         </p>
         <h3>Архитектура</h3>
         <p class="intro">
-            <?= Html::encode($model->arch) ?>
+            <?= $model->arch ?>
         </p>
 
     </div>  

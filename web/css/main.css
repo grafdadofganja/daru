@@ -30,6 +30,7 @@ body{
 }
 .articles .intro{
 	font-size: 1.2em;
+	text-align: justify;
 }
 .titleimg{
 	width: 100%;
