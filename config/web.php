@@ -10,6 +10,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'hvjhkj556Qh6',
+            //'baseUrl' => '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -46,12 +47,16 @@ $config = [
             'rules' => [
                 [
                     'pattern' => 'article',
-                    'route' => 'article/index',
-                    'suffix' => '.json',
+                    'route' => 'article/<action>',
+                    'suffix' => '.asp',
                 ],
             ],
         ],
-        
+        'assetManager' => [
+            'basePath' => '@webroot/assets',
+            'baseUrl' => '@web/assets'
+        ],
+                
     ],
     'params' => $params,
 ];
