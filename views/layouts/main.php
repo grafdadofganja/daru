@@ -58,8 +58,9 @@ AppAsset::register($this);
                     [
                         'label' => 'Эпопея', 'items' => [
                             ['label' => 'Сезон 1', 'url' => ['/article/tale']],
-                            ['label' => 'Сезон 2', 'url' => ['/article/tale']],
-                            ['label' => 'Сезон 3', 'url' => ['/article/tale']],
+                            ['label' => 'Сезон 2', 'url' => ['/article/tale?id=18']],
+                            ['label' => 'Сезон 3', 'url' => ['/article/tale?id=37']],
+                            ['label' => 'Сезон 4', 'url' => ['/article/tale?id=60']],
                         ]
                     ],
                     ['label' => 'Прочее', 'url' => ['/site/update-price']],
@@ -109,7 +110,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; zlapot, cherapot edition <?= date('Y') ?></p>
 
-        <p class="pull-right">Revi Daru company &copy;</p>
+        <p class="pull-right">Raааvi Daru company, Саня, запомни, сукаблят &copy;</p>
     </div>
 </footer>
 

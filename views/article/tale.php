@@ -28,6 +28,7 @@ $this->title = $model->name;
 				<?= $model->text ?>
 			</p>
 			<?= Html::a('Следующая глава', ['article/tale', 'id' => ++$model->id], ['class' => 'next']) ?>
+			
 
 			<p class="description">
 				<?= $model->description ?>
